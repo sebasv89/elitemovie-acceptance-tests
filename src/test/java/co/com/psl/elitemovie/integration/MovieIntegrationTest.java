@@ -6,13 +6,13 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import co.com.psl.elitemovie.EliteMovieCleanDataUtils;
 import co.com.psl.elitemovie.integration.dto.MovieDto;
 import co.com.psl.elitemovie.integration.dto.MovieLightWeightDto;
 import co.com.psl.elitemovie.integration.util.EliteMovieConstants;
-import cucumber.api.java.After;
 
 public class MovieIntegrationTest extends BaseIntegrationTest {
 
@@ -44,7 +44,7 @@ public class MovieIntegrationTest extends BaseIntegrationTest {
 
 	}
 
-	@After
+	@AfterTest
 	public void cleanUp() throws IOException {
 		EliteMovieCleanDataUtils.cleanAll();
 	}

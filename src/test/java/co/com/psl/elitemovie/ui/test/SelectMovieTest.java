@@ -2,17 +2,15 @@ package co.com.psl.elitemovie.ui.test;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import co.com.psl.elitemovie.EliteMovieCleanDataUtils;
-import cucumber.api.java.After;
 
 public class SelectMovieTest extends EliteMovieTest { 
 	
@@ -51,7 +49,7 @@ public class SelectMovieTest extends EliteMovieTest {
 	}
 
 
-	@After
+	@AfterMethod
 	public void cleanUp() throws IOException {
 		EliteMovieCleanDataUtils.cleanAll();
 	}
