@@ -24,7 +24,7 @@ public class SelectMovieTest extends EliteMovieTest {
 
 		getSelectMoviePageBehavior().selectMovieByIndex(1);
 
-		getSelectSchedulePageBehavior().scheduleMovie("2017-03-02 17:00", "1");
+		getSelectSchedulePageBehavior().scheduleMovie("2017-03-02 18:00", "1");
 
 		List<String> seats = new ArrayList<String>();
 		seats.add("3,8");
@@ -43,7 +43,7 @@ public class SelectMovieTest extends EliteMovieTest {
 
 		// After transaction verification.
 		getSelectMoviePageBehavior().selectMovieByIndex(1);
-		getSelectSchedulePageBehavior().scheduleMovie("2017-03-02 17:00", "1");
+		getSelectSchedulePageBehavior().scheduleMovie("2017-03-02 18:00", "1");
 		getSelectSeatsPageBehavior().verifySeats(seats);
 	}
 
